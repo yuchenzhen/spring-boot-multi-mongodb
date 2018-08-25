@@ -13,17 +13,6 @@ import org.springframework.data.mongodb.core.mapping.MongoMappingContext;
 @Configuration
 @ConfigurationProperties(prefix = "spring.data.mongodb.invest-admin")
 public class InvestAdminDbConfig extends AbstractMongoConfig {
-//    @Primary
-//    @Override
-//    public @Bean(name = "investAdminDbConfigMongoTemplate") MongoTemplate getMongoTemplate(MongoMappingContext context) throws Exception {
-//        //去除保存实体时，spring data mongodb 自动添加的_class字段
-//        MappingMongoConverter converter = new MappingMongoConverter(new DefaultDbRefResolver(mongoDbFactory()), context);
-//        converter.setTypeMapper(new DefaultMongoTypeMapper(null));
-//
-//        MongoTemplate mongoTemplate = new MongoTemplate(mongoDbFactory(), converter);
-//
-//        return mongoTemplate;
-//    }
     @Override
     @Bean(name ="investAdminDbConfigMongoTemplate")
     public MongoTemplate getMongoTemplate() throws Exception {
